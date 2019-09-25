@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+
+spring:
+  # 数据源
+  datasource:
+    password: 123456
+    username: root
+    url: jdbc:mysql://localhost:3306/test_data?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+  # redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+      # jedis客户端
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: 1ms
+      # lettuce客户端
+    lettuce:
+      pool:
+        max-active: 8
+
+mybatis:
+    mapper-locations: classpath*:mapping/*.xml
+    type-aliases-package: com.example.entity
+logging:
+  level:
+    com.example.mapper : debug
