@@ -1,0 +1,188 @@
+2019-09-27 10:19:14.850 [main] ERROR o.s.boot.SpringApplication
+                -Application run failed
+org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, java.lang.String>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:242)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:218)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:202)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:172)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:338)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:314)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:265)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:226)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:203)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:305)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.example.DemoApplication.main(DemoApplication.java:10)
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, java.lang.String>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321)
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194)
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170)
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96)
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88)
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:64)
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:56)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$2(Binder.java:293)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:429)
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:372)
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:293)
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:254)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:214)
+	... 18 common frames omitted
+2019-09-27 10:20:48.360 [main] ERROR o.s.boot.SpringApplication
+                -Application run failed
+org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, java.lang.String>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:242)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:218)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:202)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:172)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:338)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:314)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:265)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:226)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:203)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:305)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.example.DemoApplication.main(DemoApplication.java:10)
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, java.lang.String>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321)
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194)
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170)
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96)
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88)
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:64)
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:56)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$2(Binder.java:293)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:429)
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:372)
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:293)
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:254)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:214)
+	... 18 common frames omitted
+2019-09-27 10:21:22.904 [main] INFO  com.example.DemoApplication
+                -Starting DemoApplication on DESKTOP-N18UGLC with PID 12964 (E:\MyCode\JAVA\Demo\jpa\target\classes started by DELL in E:\MyCode\JAVA\Demo\demo)
+2019-09-27 10:21:22.910 [main] INFO  com.example.DemoApplication
+                -The following profiles are active: dev
+2019-09-27 10:21:24.156 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-27 10:21:24.219 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                -Finished Spring Data repository scanning in 46ms. Found 0 repository interfaces.
+2019-09-27 10:21:24.803 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+                -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c06144a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-27 10:21:25.617 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                -Tomcat initialized with port(s): 8080 (http)
+2019-09-27 10:21:25.676 [main] INFO  o.a.catalina.core.StandardService
+                -Starting service [Tomcat]
+2019-09-27 10:21:25.676 [main] INFO  o.a.catalina.core.StandardEngine
+                -Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-09-27 10:21:25.938 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                -Initializing Spring embedded WebApplicationContext
+2019-09-27 10:21:25.938 [main] INFO  o.s.web.context.ContextLoader
+                -Root WebApplicationContext: initialization completed in 2941 ms
+2019-09-27 10:21:26.250 [main] INFO  com.zaxxer.hikari.HikariDataSource
+                -HikariPool-1 - Starting...
+2019-09-27 10:21:26.252 [main] WARN  c.z.hikari.util.DriverDataSource
+                -Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-09-27 10:21:26.556 [main] INFO  com.zaxxer.hikari.HikariDataSource
+                -HikariPool-1 - Start completed.
+2019-09-27 10:21:26.751 [main] INFO  o.h.jpa.internal.util.LogHelper
+                -HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-27 10:21:26.886 [main] INFO  org.hibernate.Version
+                -HHH000412: Hibernate Core {5.3.11.Final}
+2019-09-27 10:21:26.888 [main] INFO  org.hibernate.cfg.Environment
+                -HHH000206: hibernate.properties not found
+2019-09-27 10:21:27.191 [main] INFO  o.h.annotations.common.Version
+                -HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-27 10:21:27.533 [main] INFO  org.hibernate.dialect.Dialect
+                -HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-27 10:21:29.058 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-27 10:21:29.583 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor
+                -Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-27 10:21:29.674 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration
+                -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-27 10:21:29.956 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                -Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-27 10:21:29.963 [main] INFO  com.example.DemoApplication
+                -Started DemoApplication in 8.369 seconds (JVM running for 14.262)
+2019-09-27 10:21:37.215 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-27 10:21:37.215 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet
+                -Initializing Servlet 'dispatcherServlet'
+2019-09-27 10:21:37.227 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet
+                -Completed initialization in 12 ms
+2019-09-27 10:21:37.606 [http-nio-8080-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator
+                -HHH000397: Using ASTQueryTranslatorFactory
+2019-09-27 10:21:37.793 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder
+                -binding parameter [1] as [VARCHAR] - ['哈哈哈']
+2019-09-27 10:21:37.794 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder
+                -binding parameter [2] as [BIGINT] - [3]
+2019-09-27 10:21:37.808 [http-nio-8080-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor
+                -extracted value ([col_0_0_] : [BIGINT]) - [1]
+2019-09-27 10:21:37.809 [http-nio-8080-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor
+                -extracted value ([col_1_0_] : [VARCHAR]) - [菌类]
+2019-09-27 10:21:37.809 [http-nio-8080-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor
+                -extracted value ([col_2_0_] : [BIGINT]) - [3]
+2019-09-27 10:21:37.810 [http-nio-8080-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor
+                -extracted value ([col_3_0_] : [VARCHAR]) - ['哈哈哈']
+2019-09-27 10:23:42.430 [http-nio-8080-exec-3] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-27 10:23:42.442 [http-nio-8080-exec-3] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                -Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
+2019-09-27 10:23:42.914 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder
+                -binding parameter [1] as [VARCHAR] - ['哈哈哈']
+2019-09-27 10:23:42.914 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder
+                -binding parameter [2] as [BIGINT] - [3]
+2019-09-27 10:23:42.916 [http-nio-8080-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor
+                -extracted value ([col_0_0_] : [BIGINT]) - [1]
+2019-09-27 10:23:42.917 [http-nio-8080-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor
+                -extracted value ([col_1_0_] : [VARCHAR]) - [菌类]
+2019-09-27 10:23:42.917 [http-nio-8080-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor
+                -extracted value ([col_2_0_] : [BIGINT]) - [3]
+2019-09-27 10:23:42.918 [http-nio-8080-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor
+                -extracted value ([col_3_0_] : [VARCHAR]) - ['哈哈哈']
+2019-09-27 10:24:29.566 [http-nio-8080-exec-4] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-27 10:24:29.575 [http-nio-8080-exec-4] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                -Finished Spring Data repository scanning in 8ms. Found 0 repository interfaces.
+2019-09-27 10:24:29.721 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder
+                -binding parameter [1] as [BIGINT] - [3]
+2019-09-27 10:24:29.722 [http-nio-8080-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor
+                -extracted value ([col_0_0_] : [BIGINT]) - [1]
+2019-09-27 10:24:29.723 [http-nio-8080-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor
+                -extracted value ([col_1_0_] : [VARCHAR]) - [菌类]
+2019-09-27 10:24:29.723 [http-nio-8080-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor
+                -extracted value ([col_2_0_] : [BIGINT]) - [3]
+2019-09-27 10:45:37.646 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder
+                -binding parameter [1] as [BIGINT] - [3]
+2019-09-27 10:45:37.648 [http-nio-8080-exec-6] TRACE o.h.t.descriptor.sql.BasicExtractor
+                -extracted value ([col_0_0_] : [BIGINT]) - [1]
+2019-09-27 10:45:37.649 [http-nio-8080-exec-6] TRACE o.h.t.descriptor.sql.BasicExtractor
+                -extracted value ([col_1_0_] : [VARCHAR]) - [菌类]
+2019-09-27 10:45:37.649 [http-nio-8080-exec-6] TRACE o.h.t.descriptor.sql.BasicExtractor
+                -extracted value ([col_2_0_] : [BIGINT]) - [3]
+2019-09-27 10:50:42.775 [Thread-38] INFO  o.s.s.c.ThreadPoolTaskExecutor
+                -Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-27 10:50:42.777 [Thread-38] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                -Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-27 10:50:42.783 [Thread-38] INFO  com.zaxxer.hikari.HikariDataSource
+                -HikariPool-1 - Shutdown initiated...
+2019-09-27 10:50:42.802 [Thread-38] INFO  com.zaxxer.hikari.HikariDataSource
+                -HikariPool-1 - Shutdown completed.

@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 
 
 spring:
@@ -7,8 +7,8 @@ spring:
   datasource:
     password: 123456
     username: root
-    url: jdbc:mysql://localhost:3306/test_data?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
-    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
   # redis
   redis:
     host: 127.0.0.1
@@ -18,15 +18,53 @@ spring:
     jedis:
       pool:
         max-active: 8
-        max-wait: 1ms
+        max-wait: -1
+        max-idle: 5
+        min-idle: 0
       # lettuce客户端
     lettuce:
       pool:
         max-active: 8
-
+    database: 0
+    timeout: 1000
+  data:
+    elasticsearch:
+      cluster-nodes: 127.0.0.1:9200
+  main:
+    allow-bean-definition-overriding: true
+  rabbitmq:
+    host: api-test.4seasons-life.com
+    port: 5672
+    username: admin
+    password: admin
+    listener:
+      simple:
+        acknowledge-mode: manual
+        concurrency: 1
+        max-concurrency: 20
+        prefetch: 5
+rabbit:
+  product:
+    queue: QUEUE_PRODUCT
+    exchange: my-mq-exchange-direct
+    routingkey: spring-boot-routingKey_product
+  banner:
+    queue: QUEUE_BANNER
+    exchange: my-mq-exchange-direct
+    routingkey: spring-boot-routingKey_banner
+  tab:
+    queue: QUEUE_TAB
+    exchange: my-mq-exchange-direct
+    routingkey: spring-boot-routingKey_tab
 mybatis:
     mapper-locations: classpath*:mapping/*.xml
     type-aliases-package: com.example.entity
 logging:
   level:
     com.example.mapper : debug
+
+# es config
+
+
+
+

@@ -1,4 +1,4 @@
-package com.example.entity;
+package app.component.entity;
 
 import lombok.Data;
 
@@ -12,15 +12,14 @@ public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private Integer id;
+
     private String name;
-    private Integer age;
+    private int age;
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
     }
