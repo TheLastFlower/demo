@@ -20,7 +20,7 @@ import java.io.IOException;
 @Component
 public class MyConsumer  {
 
-   /* @RabbitListener(
+   @RabbitListener(
             bindings = @QueueBinding(
                     exchange = @Exchange(value = "${rabbit.product.exchange}", type = "direct", durable = "true", ignoreDeclarationExceptions = "true"),
                     value = @Queue(value = "${rabbit.product.queue}", durable = "true"),
@@ -40,7 +40,7 @@ public class MyConsumer  {
         channel.basicAck(deliveryTag,true);
         System.out.println("product队列: " + new String(message.getBody()));
     }
-*/
+
 
 
 }

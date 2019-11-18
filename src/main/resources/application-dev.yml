@@ -45,9 +45,9 @@ spring:
         prefetch: 5
 rabbit:
   product:
-    queue: QUEUE_PRODUCT
-    exchange: my-mq-exchange-direct
-    routingkey: spring-boot-routingKey_product
+    queue: q3-table_change-season_product
+    exchange: xxxcanal_listener_exchange-fsdb
+    routingkey: routingKey-table_change-season_product
   banner:
     queue: QUEUE_BANNER
     exchange: my-mq-exchange-direct
